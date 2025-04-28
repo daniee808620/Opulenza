@@ -1,26 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFA500; /* Bright Orange */
+  background-color: #FF5B00; /* Orange background */
   font-family: 'Arimo', sans-serif;
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
   text-align: center;
-  padding: 20px;
-  width: 100%;
-  max-width: 380px; /* Set max width for mobile */
+  padding: 50px 20px;
 }
 
 h1, p {
   color: #003366;
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: 600;
+  font-size: 16px;
+  margin: 5px;
 }
 
 /* Hamburger menu styling */
@@ -85,49 +78,39 @@ h1, p {
 
 /* Form Styling */
 form {
-  background: rgba(255, 255, 255, 0.85); /* Transparent white background */
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  background: #FFFFFF; /* Pure White */
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: inline-block;
-  width: 100%;
-  max-width: 350px; /* Set max width for form */
+  margin-top: 25px;
   transition: all 0.3s ease;
-  margin-top: 20px;
 }
 
 form input {
   display: block;
-  width: 100%;
-  margin: 12px auto;
-  padding: 12px;
+  width: 260px;
+  margin: 10px auto;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 14px;
-  background-color: #f8f8f8;
-  transition: border 0.3s ease;
-}
-
-form input:focus {
-  border: 1px solid #003366; /* Blue border on focus */
-  outline: none;
 }
 
 form button {
   background-color: #003366;
   color: white;
-  padding: 12px 25px;
+  padding: 10px 25px;
   border: none;
-  margin-top: 20px;
-  border-radius: 8px;
+  margin-top: 15px;
+  border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-  transition: background 0.3s, transform 0.3s;
+  transition: background 0.3s;
 }
 
 form button:hover {
   background-color: #002244;
-  transform: scale(1.05); /* Slightly enlarge the button */
 }
 
 /* Loading with progress bar */
@@ -138,7 +121,7 @@ form button:hover {
 }
 
 .progress-bar {
-  width: 100%;
+  width: 300px;
   height: 30px;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 15px;
@@ -160,7 +143,7 @@ form button:hover {
 }
 
 .loading p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   animation: fadeIn 2s ease-in-out;
 }
@@ -169,35 +152,4 @@ form button:hover {
 @keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
-}
-
-/* Error box for validation */
-.error-box {
-  background-color: #FF4C4C;
-  color: white;
-  padding: 12px 18px;
-  margin: 15px auto;
-  width: 300px;
-  border-radius: 10px;
-  font-size: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  position: relative;
-  text-align: left;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Close button inside error */
-.error-box::after {
-  content: '×';
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Close functionality */
-.error-box:hover::after {
-  color: #000;
 }
