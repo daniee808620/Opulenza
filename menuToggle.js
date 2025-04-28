@@ -4,16 +4,10 @@ const closeMenu = document.getElementById('closeMenu');
 
 // Open the menu
 hamburger.addEventListener('click', () => {
-  menu.style.display = 'block';
-  setTimeout(() => {
-    menu.style.transform = 'translateX(0)';
-  }, 10);
+  menu.classList.add('show');  // Add the class to show the menu
 });
 
 // Close the menu
 closeMenu.addEventListener('click', () => {
-  menu.style.transform = 'translateX(100%)';
-  setTimeout(() => {
-    menu.style.display = 'none';
-  }, 300); // Wait for the animation to finish
+  menu.classList.remove('show');  // Remove the class to hide the menu
 });
