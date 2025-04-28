@@ -3,11 +3,17 @@ body {
   padding: 0;
   background-color: #FFA500; /* Bright Orange */
   font-family: 'Arimo', sans-serif;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   text-align: center;
   padding: 50px 20px;
+  width: 100%;
+  max-width: 500px; /* Maximum width for form container */
 }
 
 h1, p {
@@ -79,15 +85,15 @@ h1, p {
 
 /* Form Styling */
 form {
-  background: #FFFFFF; /* Pure White */
+  background: rgba(255, 255, 255, 0.85); /* Transparent white background */
   padding: 35px 30px;
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   display: inline-block;
   margin-top: 40px;
-  transition: all 0.3s ease;
   width: 100%;
   max-width: 400px; /* Limit form width */
+  transition: all 0.3s ease;
 }
 
 form input {
