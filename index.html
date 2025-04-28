@@ -2,35 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EarnWave - Register</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Hamburger Menu -->
-  <div class="menu" id="menu">
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+
+  <!-- Hamburger Menu Button -->
+  <div id="hamburger" class="hamburger-icon">
+    &#9776;
+  </div>
+
+  <!-- Menu Content -->
+  <div id="menuContent" class="menu-content">
+    <!-- Close button -->
+    <div id="closeMenu" class="close-menu">
+      &times;
     </div>
-    <div class="menu-content" id="menuContent">
-      <a href="#" class="menu-item">Login</a>
-      <a href="#" class="menu-item">Home</a>
-      <a href="#" class="menu-item">Top Earner</a>
-      <a href="#" class="menu-item">Contact us</a>
-      <span class="close-btn" id="closeMenu">×</span>
-    </div>
+    <ul>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Top Earner</a></li>
+      <li><a href="#">Contact us</a></li>
+    </ul>
   </div>
 
   <div class="container">
-    <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Registration Icon" class="icon">
     <h1>Welcome to EarnWave</h1>
     <p>Register now to start the adventure</p>
-
-    <div id="errorBox" class="error-box" style="display: none;"></div>
 
     <form id="registerForm">
       <input type="text" id="username" placeholder="Username" required>
@@ -40,15 +40,8 @@
       <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Sign Up</button>
     </form>
-
-    <div class="loading" id="loading">
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill">0%</div>
-      </div>
-      <p>We are checking your details<br>Simply wait while we register you</p>
-    </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="menuToggle.js"></script>
 </body>
 </html>
