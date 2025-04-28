@@ -16,10 +16,7 @@
 
   <!-- Menu Content -->
   <div id="menuContent" class="menu-content">
-    <!-- Close button -->
-    <div id="closeMenu" class="close-menu">
-      &times;
-    </div>
+    <div id="closeMenu" class="close-menu">&times;</div>
     <ul>
       <li><a href="login.html">Login</a></li>
       <li><a href="#">Home</a></li>
@@ -32,6 +29,9 @@
     <h1>Welcome to EarnWave</h1>
     <p>Register now to start the adventure</p>
 
+    <div id="errorBox" class="error-box" style="display: none;"></div>
+    <div id="successBox" class="success-box" style="display: none;"></div>
+
     <form id="registerForm">
       <input type="text" id="username" placeholder="Username" required>
       <input type="email" id="email" placeholder="Email" required>
@@ -40,8 +40,16 @@
       <input type="password" id="password" placeholder="Password" required>
       <button type="submit">Sign Up</button>
     </form>
+
+    <div class="loading" id="loading" style="display: none;">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill">0%</div>
+      </div>
+      <p>We are checking your details<br>Simply wait while we register you</p>
+    </div>
   </div>
 
   <script src="menuToggle.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
