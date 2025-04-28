@@ -1,3 +1,4 @@
+/* General styling */
 body {
   margin: 0;
   padding: 0;
@@ -10,43 +11,25 @@ body {
   padding: 50px 20px;
 }
 
-.icon {
-  width: 70px;
-  margin-bottom: 20px;
-}
-
 h1, p {
   color: #003366;
   font-size: 16px;
   margin: 5px;
 }
 
-/* Hamburger menu styles */
-.menu {
+/* Hamburger menu styling */
+.hamburger-icon {
+  font-size: 30px;
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
   z-index: 1000;
 }
 
-.hamburger {
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hamburger span {
-  width: 100%;
-  height: 5px;
-  background-color: white;
-  border-radius: 5px;
-}
-
+/* Menu content */
 .menu-content {
-  display: none;
+  display: none; /* Initially hidden */
   position: fixed;
   top: 0;
   right: 0;
@@ -57,90 +40,52 @@ h1, p {
   color: white;
   font-family: 'Anton', sans-serif;
   transition: transform 0.3s ease;
-  transform: translateX(100%);
+  transform: translateX(100%); /* Initially off-screen */
 }
 
-.menu-item {
+.menu-content.show {
   display: block;
-  font-size: 20px;
-  color: white;
-  margin: 15px 0;
+  transform: translateX(0); /* Move it into view */
+}
+
+.menu-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-content ul li {
+  margin: 20px 0;
+}
+
+.menu-content ul li a {
   text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
 }
 
-.menu-item:hover {
-  color: #00FF00;
+.menu-content ul li a:hover {
+  color: #00FF00; /* Green hover effect */
 }
 
-.close-btn {
+/* Close button inside menu */
+.close-menu {
+  font-size: 30px;
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 20px;
-  font-size: 40px;
   cursor: pointer;
-  color: white;
-  transition: color 0.3s ease;
 }
 
-.close-btn:hover {
-  color: #ff4c4c;
-}
-
-/* Error box upgraded */
-.error-box {
-  background-color: #ff4c4c;
-  color: white;
-  padding: 12px 18px;
-  margin: 15px auto;
-  width: 320px;
-  border-radius: 10px;
-  font-size: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  position: relative;
-  text-align: left;
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Close button inside error */
-.error-box::after {
-  content: '×';
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Close functionality */
-.error-box:hover::after {
-  color: #000;
-}
-
-/* Form styles */
+/* Form Styling */
 form {
-  background: rgba(255, 255, 255, 0.2); /* Transparent */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #FFFFFF; /* Pure White */
   padding: 25px 20px;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: inline-block;
   margin-top: 25px;
   transition: all 0.3s ease;
-  animation: zoomIn 0.8s ease;
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 
 form input {
@@ -151,7 +96,6 @@ form input {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
-  background: rgba(255,255,255,0.6); /* Inputs also soft transparent */
 }
 
 form button {
@@ -168,44 +112,4 @@ form button {
 
 form button:hover {
   background-color: #002244;
-}
-
-/* Loading with progress bar */
-.loading {
-  display: none;
-  margin-top: 30px;
-  color: white;
-}
-
-.progress-bar {
-  width: 300px;
-  height: 30px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
-  margin: 20px auto;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.progress-fill {
-  height: 100%;
-  width: 0%;
-  background-color: #003366;
-  text-align: center;
-  line-height: 30px;
-  color: white;
-  font-weight: bold;
-  border-radius: 15px 0 0 15px;
-  transition: width 0.3s ease;
-}
-
-.loading p {
-  font-size: 15px;
-  line-height: 1.5;
-  animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
 }
