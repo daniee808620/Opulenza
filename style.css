@@ -52,14 +52,30 @@ h1, p {
   color: #000;
 }
 
+/* FORM updated to transparent with glassmorphism + animation */
 form {
-  background: #FFFFFF; /* Pure White */
+  background: rgba(255, 255, 255, 0.2); /* Transparent */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 25px 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   display: inline-block;
   margin-top: 25px;
   transition: all 0.3s ease;
+  animation: zoomIn 0.8s ease;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 form input {
@@ -70,6 +86,7 @@ form input {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 14px;
+  background: rgba(255,255,255,0.6); /* Inputs also soft transparent */
 }
 
 form button {
