@@ -1,8 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #FF5B00; /* Orange background */
+  background-color: #FFA500; /* Bright Orange background */
   font-family: 'Arimo', sans-serif;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
